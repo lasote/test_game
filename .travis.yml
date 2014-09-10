@@ -15,9 +15,10 @@ install:
 - rm cmake-3.0.1-Linux-i386.tar.gz
 script:
 - cmake --version
-- bii init
+- bii init biicode_project
+- mv !(biicode_project) biicode_project/blocks/lasote/test_game
+- cd biicode_project
 - bii new lasote/test_game
-- mv * blocks/lasote/test_game
 - bii find -um
 - bii cpp:build
 - ./bin/lasote_test_game_test && ls ./bin/lasote_test_game_main
