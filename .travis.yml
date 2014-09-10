@@ -16,7 +16,7 @@ install:
 script:
 - cmake --version
 - bii init biicode_project
-- mv !(biicode_project) biicode_project/blocks/lasote/test_game
+- mv !(biicode_project) ./biicode_project/blocks/lasote/test_game
 - cd biicode_project
 - bii new lasote/test_game
 - bii find -um
