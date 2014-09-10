@@ -17,7 +17,7 @@ script:
 - cmake --version
 - bii init
 - bii new lasote/test_game
-- mv *.* blocks/lasote/test_game
+- mv * blocks/lasote/test_game
 - bii find -um
 - bii cpp:build
 - ./bin/lasote_test_game_test && ls ./bin/lasote_test_game_main
