@@ -21,7 +21,7 @@ script:
 - bii find -um
 - bii cpp:build
 - ./bin/lasote_test_game_test && ls ./bin/lasote_test_game_main
-after_success
+after_success:
 - bii user lasote -p $BII_LASOTE_PASSWORD
 - bii publish
 env:
