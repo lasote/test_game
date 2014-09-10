@@ -34,4 +34,4 @@ script:
   - mv *.* blocks/lasote/test_game
   - bii find -um
   - bii cpp:build  
-  - ./bin/lasote_test_game_test
+  - ./bin/lasote_test_game_test && ls ./bin/lasote_test_game_main
