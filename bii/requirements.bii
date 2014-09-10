@@ -1,0 +1,5 @@
+# This file contains your block external dependencies references
+sqlite/sqlite: 4
+glui/glui: 5
+google/gtest: 4
+erincatto/box2d: 4
