@@ -20,8 +20,10 @@ script:
 - mv *.* blocks/lasote/test_game
 - bii find -um
 - bii cpp:build
-- bii user lasote -p $BII_LASOTE_PASSWORD
 - ./bin/lasote_test_game_test && ls ./bin/lasote_test_game_main
+after_success
+- bii user lasote -p $BII_LASOTE_PASSWORD
+- bii publish
 env:
   global:
     secure: d+SQFxeGGYYMmhN2ngOi5yKxy3UNGYMbx+Hzp8ufDdHQi1/fmnxh8MHQ785QKq4BK6zsNyisGoeJwnl/DzPHzG7SuaO6hZ3MbdZ7fuzmOyjXsCVdyYM6aowOFM4ZKGlRIz3wUZt0Iqhnw44/gVmrzFdKfBw+7P/L4IMKS0+I9Tw=
