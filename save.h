@@ -1,4 +1,4 @@
-#include <sqlite/sqlite/sqlite3.h>
+#include <sqlite/sqlite/sqlite3/sqlite3.h>
 #include <string>
 #include <stdlib.h>
 #include <stdio.h>
