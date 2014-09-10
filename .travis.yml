@@ -1,37 +1,27 @@
-## 
-## Travis 
 language: cpp
-
 compiler:
-  - gcc
-
-# Setup repos etc before installation
+- gcc
 before_install:
-  - sudo apt-get update -qq
-
-# Install dependencies
+- sudo apt-get update -qq
 install:
-  # install biicode:
-
-  - wget http://www.biicode.com/downloads/latest/ubuntu32
-  - mv ubuntu32 bii-ubuntu32.deb
-  - (! sudo dpkg -i bii-ubuntu32.deb ) && sudo apt-get -f install
-  - rm bii-ubuntu32.deb
-  - wget http://www.cmake.org/files/v3.0/cmake-3.0.1-Linux-i386.tar.gz
-  - tar -xzf cmake-3.0.1-Linux-i386.tar.gz
-  - sudo cp -fR cmake-3.0.1-Linux-i386/* /usr
-  - rm -rf cmake-3.0.1-Linux-i386
-  - rm cmake-3.0.1-Linux-i386.tar.gz
-
-
-
-
-# command to run tests
+- wget http://www.biicode.com/downloads/latest/ubuntu32
+- mv ubuntu32 bii-ubuntu32.deb
+- (! sudo dpkg -i bii-ubuntu32.deb ) && sudo apt-get -f install
+- rm bii-ubuntu32.deb
+- wget http://www.cmake.org/files/v3.0/cmake-3.0.1-Linux-i386.tar.gz
+- tar -xzf cmake-3.0.1-Linux-i386.tar.gz
+- sudo cp -fR cmake-3.0.1-Linux-i386/* /usr
+- rm -rf cmake-3.0.1-Linux-i386
+- rm cmake-3.0.1-Linux-i386.tar.gz
 script:
-  - cmake --version
-  - bii init 
-  - bii new lasote/test_game
-  - mv *.* blocks/lasote/test_game
-  - bii find -um
-  - bii cpp:build  
-  - ./bin/lasote_test_game_test && ls ./bin/lasote_test_game_main
+- cmake --version
+- bii init
+- bii new lasote/test_game
+- mv *.* blocks/lasote/test_game
+- bii find -um
+- bii cpp:build
+- bii user lasote -p $BII_LASOTE_PASSWORD
+- ./bin/lasote_test_game_test && ls ./bin/lasote_test_game_main
+env:
+  global:
+    secure: d+SQFxeGGYYMmhN2ngOi5yKxy3UNGYMbx+Hzp8ufDdHQi1/fmnxh8MHQ785QKq4BK6zsNyisGoeJwnl/DzPHzG7SuaO6hZ3MbdZ7fuzmOyjXsCVdyYM6aowOFM4ZKGlRIz3wUZt0Iqhnw44/gVmrzFdKfBw+7P/L4IMKS0+I9Tw=
