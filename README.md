@@ -1,6 +1,5 @@
-[![Build Status](https://travis-ci.org/lasote/test_game.svg?branch=master)](https://travis-ci.org/lasote/test_game)
 
-lasote/test_game
+lasote/test_game [![Build Status](https://travis-ci.org/lasote/test_game.svg?branch=master)](https://travis-ci.org/lasote/test_game)
 =========
 
 Test game is an application that includes BOX2D, GLUI, GLUT, SQLITE AND GOOGLE TEST (GTEST).
