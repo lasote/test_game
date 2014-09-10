@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/lasote/test_game.svg?branch=master)](https://travis-ci.org/lasote/test_game)
+
 lasote/test_game
 =========
 
